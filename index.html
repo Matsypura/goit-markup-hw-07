@@ -48,14 +48,14 @@
         </ul>
       </div>
 <div class="mobil-window">
-        <button type="button" class="mobil-menu-button" data-modal-open >
-          <svg class="mobil-menu"  width="8" height="8">
-            <use href="./images/customers/symbol-defs.svg#compani"></use>
+        <button type="button" class="mobil-menu-button " js-open-menu aria-expanded="false" aria-controls="mobile-menu">
+          <svg class="mobil-menu"  width="32" height="22">
+            <use href="./images/customers/symbol-defs.svg#icon-icon-menu"></use>
           </svg>
         </button>
         <div class="backdrop is-hidden" data-modal>
           <div class="modal-mobil">
-            <button class="close-button" data-modal-close>
+            <button class="close-button " data-modal-close>
               <svg class="close-item" width="8px" height="8px">
                <use
                 href="./images/customers/symbol-defs-close.svg#icon-close"></use>
@@ -615,5 +615,6 @@
     </footer>
     <!-- Ставимо перед закриваючим тегом body -->
     <script src="./js/modal.js"></script>
+    <script src="./js/mobil.js>"></script>
   </body>
 </html>
