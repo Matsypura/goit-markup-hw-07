@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <title>Studio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,8 +12,9 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700;800&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/stile.css" />
+    <!-- <link rel="stylesheet" href="./css/stile.css" /> -->
     <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/mobil.css">
   </head>
 
   <body>
@@ -45,6 +47,83 @@
           </li>
         </ul>
       </div>
+<div class="mobil-window">
+        <button type="button" class="mobil-menu-button" data-modal-open >
+          <svg class="mobil-menu"  width="8" height="8">
+            <use href="./images/customers/symbol-defs.svg#compani"></use>
+          </svg>
+        </button>
+        <div class="backdrop is-hidden" data-modal>
+          <div class="modal-mobil">
+            <button class="close-button" data-modal-close>
+              <svg class="close-item" width="8px" height="8px">
+               <use
+                href="./images/customers/symbol-defs-close.svg#icon-close"></use>
+                </svg> 
+            </button>
+            <ul>
+              <li class="item">
+                <a class="nav-link current-page" href="./index.html" >Studio</a>
+              </li>
+              <li class="item">
+                <a href="./portfolio.html" class="nav-link">Portfolio</a>
+              </li>
+              <li class="item"><a href="/" class="nav-link">Contacts</a></li>
+            </ul>
+            <ul class="contact">
+              <li class="item">
+                <a href="info@devstudio.com" class="link-contact"
+                  >info@devstudio.com</a
+                >
+              </li>
+              <li class="item">
+                <a href="11(000)111-11-11" class="link-contact"
+                  >11 (000) 111-11-11</a
+                >
+              </li>
+            </ul>
+            <ul class="block-icon-team">
+              <li>
+                <a href="/" class="team-icon">
+                  <svg class="icon-parameters" width="16" height="16">
+                    <use
+                      href="./images/customers/symbol-defs.svg#icon-instagram"
+                    ></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="/" class="team-icon">
+                  <svg class="icon-parameters" width="16" height="16">
+                    <use
+                      href="./images/customers/symbol-defs.svg#icon-twitter"
+                    ></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="/" class="team-icon">
+                  <svg class="icon-parameters" width="16" height="16">
+                    <use
+                      href="./images/customers/symbol-defs.svg#icon-facebook"
+                    ></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="/" class="team-icon">
+                  <svg class="icon-parameters" width="16" height="16">
+                    <use
+                      href="./images/customers/symbol-defs.svg#icon-linkedin"
+                    ></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+            </div>
+
+
+      
     </header>
 
     <!-- main -->
@@ -360,7 +439,7 @@
                 alt="man daniel"
                 width="264"
               />
-              <div class="team-text">
+              <div class="team-text wilson-bottom">
                 <h3 class="quality-title">Daniel Wilson</h3>
                 <p class="quality-title-paragraph">UI Designer</p>
                 <ul class="block-icon-team">

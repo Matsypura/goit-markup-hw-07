@@ -78,6 +78,10 @@ span {
   font-weight: bold;
   font-size: 16px;
   line-height: 1.5;
+
+      display: flex;
+      margin-left: 77px;
+   
 }
 .nav-link:hover,
 .nav-link:focus {
@@ -107,6 +111,21 @@ text-decoration: none;
 .section-hero {
   color: var(--white-text);
   background: var(--dark);
+ 
+      text-align: center;
+      padding: 192px 0px;
+      
+          background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+              rgba(46, 47, 66, 0.7)),
+            url(../images/customers/people-office.jpg);
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+          width: 1440px;
+      
+          margin: 0 auto;
+      
+        
 }
 .section-title {
   font-weight: bold;
@@ -175,6 +194,11 @@ font-family: "Roboto", sans-serif;
   font-size: 20px;
   line-height: 1.2;
   
+  
+      margin-bottom: 8px;
+      justify-content: center;
+    
+  
 }
 /* Заголовки параграфів */
 .quality-title-paragraph{
@@ -198,6 +222,12 @@ font-family: "Roboto", sans-serif;
 /* taem panel */
 .team {
   background: var(--light);
+ 
+         
+    display: block;
+    padding: 120px 0px;
+    
+  
 }
 
 /* sorting button portfolio */
@@ -325,10 +355,7 @@ ul{
   padding-bottom: 24px;
 }
 
-.site-nav {
-  display: flex;
-  margin-left: 77px;
-}
+
 
 .site-nav .item+.item {
   margin-left: 24px;
@@ -354,10 +381,7 @@ display: block;
 /*   main  */
 
 /*hero --h1--*/
-.section-hero{
-  text-align: center;
-  padding: 192px 0px ;
-}
+
 .section-title{
 
   width: 492px;
@@ -413,12 +437,7 @@ display: flex;
  
 /* Панель сотрудников */
        
-        .team{
-         
-          display: block;
-          padding: 120px 0px;
-          
-        }
+       
         /* заголовок сотрудников*/
       .team .secondary-title {
 
@@ -445,11 +464,7 @@ border-radius: 0px 0px 4px 4px;
   padding-top: 32px;
   padding-bottom:32px;
 }
- .quality-title{
- 
-  margin-bottom: 8px;
-justify-content: center;
- }
+
  .team-item .quality-list{
   text-align: center;
 }
@@ -1063,3 +1078,25 @@ opacity: 1;
 .modal-form-submit:focus {
   background-color: var(--button-focus);
 } 
+/* hm7 */
+.mobil-menu-button{
+  width: 20px;
+height: 20px;
+position: absolute;
+top:10px;
+right: 10px;
+}
+.modal-mobil{
+  width:408px;
+
+background-color:#FCFCFC;
+position: absolute;
+top:50%;
+left:50%;
+transform: translate(-50%, -50%);
+box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+border-radius: 4px;
+padding: 72px 24px 24px 24px;
+
+
+}
