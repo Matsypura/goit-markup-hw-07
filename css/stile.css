@@ -453,7 +453,7 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
 
 padding-top: 32px;
 padding-bottom:32px;
-margin-bottom: 72px;
+
 }
 .wilson-bottom{
   margin-bottom: 0px;
@@ -784,14 +784,19 @@ display: flex;
 
 
 .backdrop{
+
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 100;
+ 
   width: 100%;
   height: 100%;
   background-color: rgba(46, 47, 66, 0.4);
   transition: opacity, 250ms cubic-bezier(0.4, 0, 0.2, 1),
   visibility, 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+
+
 }  
 
 .backdrop.is-hidden{
@@ -820,6 +825,7 @@ visibility: hidden;
   fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
+
 .close-button:hover,
 .close-button:focus{
   background: var(--primary-brand);
@@ -836,20 +842,20 @@ fill: var(--accent);
 /*#region modal web*/
 .modal{
 
-width:408px;
-
-background-color:#FCFCFC;
-position: absolute;
-top:50%;
-left:50%;
-transform: translate(-50%, -50%);
-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
-border-radius: 4px;
-padding: 72px 24px 24px 24px;
-
+  position: absolute;
+  /* position: relative; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 408px;
+  height: 576px;
+  box-shadow: 0px 1px 1px rgb(0 0 0 / 14%), 0px 1px 3px rgb(0 0 0 / 12%), 0px 2px 1px rgb(0 0 0 / 20%);
+  border-radius: 4px;
+  padding: 72px 24px 24px 24px;
+margin: 15px 0px;
+background-color: var(--white-text);
 
 }
-
 
 .text-title-modal {
   text-align: center;
@@ -1036,20 +1042,199 @@ padding: 72px 24px 24px 24px;
 /*#endregion*/
 
 /*#region modal mobil */
-.modal-mobil{
-  width:408px;
-display: none;
-background-color:#FCFCFC;
-position: absolute;
-top:50%;
-left:50%;
-transform: translate(-50%, -50%);
-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
-border-radius: 4px;
-padding: 72px 24px 24px 24px;
+.button {
+  background-color: var(--button-color);
+  display: flex;
+  color: var(--accent-color);
+  border: 1px solid var(--button-color);
+  font-family: Roboto;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding: 8px 16px;
+  transition-property: background-color, color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.button:hover {
+  color: var(--button-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
 
+.button:focus {
+  color: var(--button-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  background-color: var(--accent-color);
+}
+
+.mobile-menu-open {
+  position: absolute;
+  top:24px;
+  right:16px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  height: 22px;
+
+}
+@media screen and (max-width: 767px) {
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--white-text);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);;
+    transform: translateX(100%);
+
+  }
+  .mobile-menu.is-open {
+    transform: translateX(0);
+  }
+  .mobile-menu-container {
+    position: relative;
+    padding-top: 80px;
+    padding-left: 40px;
+    padding-bottom: 40px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between  }
+
+  .menu-close-btn:hover,
+  .menu-close-btn:focus {
+    background-color: var(--accent-color);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+      0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  }
+
+  .menu-close-btn:hover,
+  .menu-close-btn:focus .modal-close-btn-icon {
+    fill: #e7e9fc;
+  }
+
+  .menu-close-btn {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--accent);
+    width: 24px;
+    height: 24px;
+    padding: 0, auto;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+      
+  }
+  .menu-nav {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    padding-left: 0;
+}
+}
+@media screen and (max-width: 767px){
+.mobile-menu .contact-menu {
+    display: flex;
+    row-gap: 40px;
+    flex-wrap: wrap;
+}
+}
+.list {
+    list-style: none;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+/*#endregion modal mobil */
+/*#region Oформлення меню на телефоні */
+.item-menu{
+  display: block;
+}
+
+.item-menu:last-child {
+  padding-bottom: 0;
+}
+.item-contact-tel {
+  font-weight: 500;
+  font-size: 8vw;
+  line-height: 1.11;
+ color: var(--primary-brand);
+}
+  .item-contact{
+    text-decoration: none;
+  }
+  .menu-link {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: var(--text);
+  }
+  .menu-link:hover{
+    color: var(--primary-brand);
+    background-color: var(--white-text);
+
+  }
+  .item-menu-list {
+    list-style: none;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+  .item-menu-list {
+    list-style: none;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+  @media screen and (min-width:200px) and (max-width: 468px){
+    .item-contact-tel{
+      font-weight: 500;
+      font-size: 8vw;
+      line-height: 1.11 ;
+      font-weight: 500;
+      font-size: 8vw;
+      line-height: 1.11;
+    }
+      .modal {
+        max-width: 90%;
+        overflow: scroll;
+    }
+  }
+  @media screen and (max-width: 767px){
+.mobile-menu .contact-amail {
+    margin-bottom: 40px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--text);
+}
+
+.contact-amail {
+    text-decoration: none;
+}
+}
+.block-icon-menu{
+  display: flex;
+    gap: 24px;
+    justify-content: space-around;
+}
 
 
 /*#endregion modal mobil */

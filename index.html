@@ -47,42 +47,47 @@
           </li>
         </ul>
       </div>
-<div class="mobil-window">
-        <button type="button" class="mobil-menu-button js-open-menu"  aria-expanded="false" aria-controls="mobile-menu">
-          <svg class="mobil-menu"  width="32" height="22">
-            <use href="./images/customers/symbol-defs.svg#icon-icon-menu"></use>
-          </svg>
-        </button>
-        <div class="backdrop is-hidden" >
-          <div class="modal-mobil ">
-            <button class="close-button " >
-              <svg class="close-item" width="8px" height="8px">
-               <use
-                href="./images/customers/symbol-defs-close.svg#icon-close"></use>
-                </svg> 
-            </button>
-            <ul>
-              <li class="item">
-                <a class="nav-link current-page" href="./index.html" >Studio</a>
+      <!--  -->
+      <button type="button"  class="mobile-menu-open js-open-menu"  >
+        <svg class="mobile-menu-open-icon" width="32" height="22">
+          <use href="./images/customers/symbol-defs.svg#icon-icon-menu"></use>
+        </svg>
+      </button>
+    </div>
+
+<!-- спливаюче вікно меню мобільне -->
+
+<div class="mobile-menu js-menu-container" >
+<div class="container  mobile-menu-container"  >
+<button type="button" class="menu-close-btn js-close-menu">
+  <svg class="menu-close-btn-icon" width="8" height="8">
+    <use
+    href="./images/customers/symbol-defs-close.svg#icon-close"></use>
+  </svg>
+</button>
+<ul class="menu-nav">
+              <li class="item-menu">
+                <a class="menu-link item-menu-list page-menu" href="./index.html" >Studio</a>
               </li>
-              <li class="item">
-                <a href="./portfolio.html" class="nav-link">Portfolio</a>
+              <li class="item-menu">
+                <a href="./portfolio.html" class="menu-link item-menu-list">Portfolio</a>
               </li>
-              <li class="item"><a href="/" class="nav-link">Contacts</a></li>
-            </ul>
-            <ul class="contact">
-              <li class="item">
-                <a href="info@devstudio.com" class="link-contact"
-                  >info@devstudio.com</a
-                >
-              </li>
-              <li class="item">
-                <a href="11(000)111-11-11" class="link-contact"
+              <li class="item-menu"><a href="/" class="menu-link item-menu-list">Contacts</a></li>
+            
+         </ul>
+         <ul class="contact-menu">
+              <li>
+                <a href="info@devstudio.com" class="item-contact-tel"
                   >11 (000) 111-11-11</a
                 >
               </li>
+              <li class="item-contact">
+                <a href="11(000)111-11-11" class="contact-amail"
+                  >info@devstudio.com </a
+                >
+              </li>
             </ul>
-            <ul class="block-icon-team">
+            <ul class="block-icon-menu">
               <li>
                 <a href="/" class="team-icon">
                   <svg class="icon-parameters" width="16" height="16">
@@ -120,7 +125,8 @@
                 </a>
               </li>
             </ul>
-            </div>
+        
+        </div>
 
 
       
@@ -615,6 +621,6 @@
     </footer>
     <!-- Ставимо перед закриваючим тегом body -->
     <script src="./js/modal.js"></script>
-    <script src="./js/mobil.js>"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
