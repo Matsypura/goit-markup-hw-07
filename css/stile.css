@@ -1364,12 +1364,7 @@ background-color: var(--white-text);
               .customers-box{
                 column-gap: 24px;
               }
-              /* .footer-container{
-         display: flex;
-         align-items: baseline;
-        flex-wrap: wrap;
-           width: 586px;
-         } */
+             
         .bottom-logo{
           justify-content: start;
         }   
@@ -1393,10 +1388,17 @@ background-color: var(--white-text);
                }
  .form-footer-submit{
   margin: 0px;
-
- }
+}
+}
+ /* 
+    .footer-container{
+           display: flex;
+           align-items: baseline;
+          flex-wrap: wrap;
+             width: 586px;
+           }  */
                            
-  }
+
 
 
 @media screen and (min-width: 1200px) {
