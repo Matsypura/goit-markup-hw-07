@@ -256,7 +256,15 @@ background-size:cover;
 /* font-size: 56px; */
 }
 /* First Button  button in studio */
-
+.formating{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/customers/people-office.jpg);
+}
 .hero-button{
    border: #2e2f42;
     padding: 16px 32px;
@@ -1254,7 +1262,141 @@ background-color: var(--white-text);
 
 
 /*#endregion modal mobil */
+@media screen and (min-width: 768px) {
+  .container {
 
+    width: 768px;
+    padding: 0 15px;
+    margin: 0 auto;
+
+    }
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  
+    }
+            .nav-link {
+      
+              font-family: 'Roboto';
+              font-style: normal;
+              font-weight: 500;
+              font-size: 16px;
+              line-height: 24px;
+      
+      
+              letter-spacing: 0.02em;
+            }
+    .mobile-menu-open-icon{
+      display: none;
+    }
+    .site-nav{
+      display: flex;
+      margin-left: 120px;
+    }
+    .contact{
+          
+      align-items: center;
+      justify-content: center;
+      display: block;
+
+    }
+   
+    .link-contact{
+
+        font-size: 12px;
+          line-height: 1.33;
+          letter-spacing: 0.04em;
+        padding-top: 16px;
+        padding-bottom: 0px;
+        margin-bottom: 4px;
+      
+    }
+  
+    .tel-link{
+   
+      font-size: 12px;
+        line-height: 1.33;
+        letter-spacing: 0.04em;
+      padding-top: 0px;
+      padding-bottom: 16px;
+      margin-bottom: 0px;
+  
+     
+    }
+    .section-title{
+        width: 500px;
+          font-weight: 500;
+          font-size: 56px;
+          line-height: 1.07;
+      
+          margin: auto;
+    }
+   
+    .hero-button{
+      margin-top: 48px;
+      margin-bottom: 124px;
+    }
+    .section{
+          padding-top: 96px;
+            padding-bottom: 96px;
+    }
+              .quality-box{
+                display: flex;
+                  flex-wrap: wrap;
+                  column-gap: 24px;
+                  row-gap: 72px;
+                  padding: 0;
+                  text-align: start;
+               
+              }
+              .quality-item{
+                flex-basis: calc((100% - 24px) / 2);
+              }
+              .team-item{
+                display: flex;
+                  flex-wrap: wrap;
+                  align-items: center;
+                  justify-content: center;
+                  column-gap: 24px;
+                  row-gap: 64px;
+              }
+              .customers-box{
+                column-gap: 24px;
+              }
+              /* .footer-container{
+         display: flex;
+         align-items: baseline;
+        flex-wrap: wrap;
+           width: 586px;
+         } */
+        .bottom-logo{
+          justify-content: start;
+        }   
+                 .footer-icon-title{
+                  justify-content: start;
+                 }
+                .footer-media{
+                  margin-left: 19px;
+                }
+               .form-footer{
+                display: flex;
+                  
+                  align-items: baseline;
+               }
+               .form-footer-subscribe{
+                width: 264px;
+                  margin-right: 24px;
+               }
+               .title-header-form{
+                justify-content: start;
+               }
+ .form-footer-submit{
+  margin: 0px;
+
+ }
+                           
+  }
 
 
 @media screen and (min-width: 1200px) {
@@ -1303,7 +1445,7 @@ background-color: var(--white-text);
   color: var(--white-text);
   background: var(--dark);
 
-  width: 1440px;
+  max-width: 1440px;
   text-align: center;
   padding: 192px 0px ;
   margin: 0 auto;
@@ -1346,6 +1488,7 @@ background-size:cover;
 .quality-box{
   display: flex;
      gap: 24px;
+    flex-wrap: nowrap;
   }
   .quality-item{
     flex-basis: calc((100% -3 * 24px) / 4 );
@@ -1548,6 +1691,7 @@ gap: 24px;
 
   display: flex;
   align-items: baseline;
+  
 
 }
 
@@ -1701,7 +1845,7 @@ justify-content: start;
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url("../images/customers/people-office@2x.jpg");
+      url("../images/dark-bg-m@2x.jpg");
   }
 }
 
