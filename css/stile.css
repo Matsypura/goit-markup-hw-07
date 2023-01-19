@@ -1,3 +1,4 @@
+/* work done */
 html{
   box-sizing: border-box;
 
@@ -335,7 +336,7 @@ border-radius: 4px;
           justify-content: center;
           align-items: center;
     }
-        /* Заголовки h3 */
+        /* Заголовки h3  */
  .quality-title {
   color: var(--dark);
 
